@@ -1,6 +1,7 @@
 import { Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import Navbar from "./components/Navbar";
+import Layout from "./components/Layout";
 
 export const routes = [
   { path: "/", element: <Home />, id: "Página Inicial" },
@@ -29,7 +30,7 @@ export const routes = [
 function AppRoutes() {
   return (
     <Routes>
-      <Route element={<Navbar />}>
+      <Route element={<Layout />}>
         {routes.map((route) => (
           <Route key={route.path} path={route.path} element={route.element} />
         ))}
