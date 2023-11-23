@@ -3,7 +3,6 @@ import { Banner } from "../components/banner/";
 const Home = () => {
   return (
     <div>
-      <h1>Home</h1>
       <Banner.BannerContainer variantSize="lg" variantColor="secondary">
         <Banner.BannerTitle>Título do Banner</Banner.BannerTitle>
         <Banner.BannerTextCarousel>
