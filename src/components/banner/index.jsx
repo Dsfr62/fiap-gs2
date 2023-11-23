@@ -4,8 +4,8 @@ import { BannerTitle } from "./banner-title";
 import { BannerTextCarousel } from "./banner-text-carousel";
 
 export const Banner = {
-  BannerContainer: BannerContainer,
-  BannerText: BannerText,
-  BannerTitle: BannerTitle,
-  BannerTextCarousel: BannerTextCarousel,
+  Container: BannerContainer,
+  Text: BannerText,
+  Title: BannerTitle,
+  TextCarousel: BannerTextCarousel,
 };
