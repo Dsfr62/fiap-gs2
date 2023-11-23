@@ -43,7 +43,7 @@ const Footer = () => {
         </div>
       </div>
       <div className="bg-black text-gray-100 text-center text-xs p-1 w-full font-semibold">
-        © WellnesChat {getCurrentYear()} - Todos os direitos reservados
+        © WellnessChat {getCurrentYear()} - Todos os direitos reservados
       </div>
     </footer>
   );
