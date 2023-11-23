@@ -1,28 +1,31 @@
 import { Routes, Route } from "react-router-dom";
-import Home from "./pages/Home";
-import Navbar from "./components/Navbar";
+import PaginaInicialPage from "./pages/PaginaInicial";
+import ReduMortInfantilPage from "./pages/ReduMortInfantil";
+import CombDoenTransmissiveisPage from "./pages/CombDoenTransmissiveis";
+import PrevTratDoencasPage from "./pages/PrevTratDoencas";
+import MelGerSaudePage from "./pages/MelGerSaude";
 import Layout from "./components/Layout";
 
 export const routes = [
-  { path: "/", element: <Home />, id: "Página Inicial" },
+  { path: "/", element: <PaginaInicialPage />, id: "Página Inicial" },
   {
     path: "/reducao-mortalidade-infantil",
-    element: <h1>Redução da mortalidade infantil</h1>,
+    element: <ReduMortInfantilPage />,
     id: "Redução da mortalidade infantil",
   },
   {
     path: "/combates-a-doencas-transmissiveis",
-    element: <h1>Combate a doenças transmissiveis</h1>,
+    element: <CombDoenTransmissiveisPage />,
     id: "Combate a doenças transmissiveis",
   },
   {
     path: "/prevencao-e-tratamento-de-doencas-nao-transmissiveis",
-    element: <h1>Prevenção e tratamento de doenças não transmissiveis</h1>,
+    element: <PrevTratDoencasPage />,
     id: "Prevenção e tratamento de doenças não transmissíveis",
   },
   {
     path: "/melhoria-geral-da-saude",
-    element: <h1>Melhoria geral da saúde</h1>,
+    element: <MelGerSaudePage />,
     id: "Melhoria geral da saúde",
   },
 ];
