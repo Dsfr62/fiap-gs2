@@ -6,6 +6,7 @@ module.exports = {
       colors: {
         "primary-default": "#ec6e0a",
         "secondary-default": "#00a9b3",
+        "secondary-deep": "#0b3547",
         "secondary-dark": "#00746d",
         "secondary-light": "#476788",
         "gray-default": "#f3f2f2",
@@ -13,7 +14,7 @@ module.exports = {
       },
     },
     fontFamily: {
-      sans: ["Gilroy-Medium"],
+      sans: ["Gilroy"],
     },
   },
   plugins: [{ "postcss-import": {} }],
