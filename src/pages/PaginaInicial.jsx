@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { Banner } from "../components/banner";
 import { Form } from "../components/form";
+import contactSVG from "../assets/svgs/contact.svg";
 
 const PaginaInicialPage = () => {
   const [isLoading, setIsLoading] = useState(false);
@@ -50,47 +51,59 @@ const PaginaInicialPage = () => {
           </Banner.Text>
         </Banner.TextCarousel>
       </Banner.Container>
-      <Form.Container
-        id="form-cadastro"
-        onSubmit={(e) => handleSubmit(e)}
-        isLoading={isLoading}
-      >
-        <Form.Title>
-          Cadastre-se
-          <Form.SubTitle>
-            Fale Conosco para se cadastrar e receber acesso grátis à nossa
-            plataforma durante 30 dias.
-          </Form.SubTitle>
-        </Form.Title>
-        <Form.InputContainer>
-          <Form.Label htmlFor="nome">Nome</Form.Label>
-          <Form.Input
-            id="nome"
-            type="text"
-            placeholder="Digite aqui"
-            required
-          />
-        </Form.InputContainer>
-        <Form.InputContainer>
-          <Form.Label htmlFor="email">Email</Form.Label>
-          <Form.Input
-            id="email"
-            type="text"
-            placeholder="Digite aqui"
-            required
-          />
-        </Form.InputContainer>
-        <Form.InputContainer>
-          <Form.Label htmlFor="descricao">Fale sobre você</Form.Label>
-          <Form.Input
-            id="descricao"
-            type="text"
-            placeholder="Digite aqui"
-            required
-          />
-        </Form.InputContainer>
-        <Form.Button>Enviar</Form.Button>
-      </Form.Container>
+      <div className="w-full flex justify-center items-start px-4 py-6 md:pb-4 md:pt-8 bg-gray-default">
+        <Form.Container
+          id="form-cadastro"
+          onSubmit={(e) => handleSubmit(e)}
+          isLoading={isLoading}
+        >
+          <Form.Title>
+            Cadastre-se
+            <Form.SubTitle>
+              Fale Conosco para se cadastrar e receber acesso grátis à nossa
+              plataforma durante 30 dias.
+            </Form.SubTitle>
+          </Form.Title>
+          <Form.InputContainer>
+            <Form.Label htmlFor="nome">Nome</Form.Label>
+            <Form.Input
+              id="nome"
+              type="text"
+              placeholder="Digite aqui"
+              required
+              disabled={isLoading}
+            />
+          </Form.InputContainer>
+          <Form.InputContainer>
+            <Form.Label htmlFor="email">Email</Form.Label>
+            <Form.Input
+              id="email"
+              type="text"
+              placeholder="Digite aqui"
+              required
+              disabled={isLoading}
+            />
+          </Form.InputContainer>
+          <Form.InputContainer>
+            <Form.Label htmlFor="descricao">Fale sobre você</Form.Label>
+            <Form.Input
+              id="descricao"
+              type="text"
+              placeholder="Digite aqui"
+              required
+              disabled={isLoading}
+            />
+          </Form.InputContainer>
+          <Form.Button>Enviar</Form.Button>
+        </Form.Container>
+        <img
+          src={contactSVG}
+          className="hidden invisible md:visible md:block"
+          alt="contact-us"
+          width={400}
+          height={400}
+        />
+      </div>
     </div>
   );
 };

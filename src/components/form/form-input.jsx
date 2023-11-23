@@ -1,4 +1,4 @@
-const FormInput = ({ type, id, value, required, placeholder }) => {
+const FormInput = ({ type, id, value, required, placeholder, disabled }) => {
   const defaultStyle = "p-1 border border-black bg-white rounded text-black";
 
   //TODO: Se quiser alterar estado e salvar, colocar aqui
@@ -10,6 +10,7 @@ const FormInput = ({ type, id, value, required, placeholder }) => {
       className={`${defaultStyle}`}
       placeholder={placeholder}
       required={required}
+      disabled={disabled}
     />
   );
 };
