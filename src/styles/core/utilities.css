@@ -1,0 +1,33 @@
+@import "tailwindcss/utilities";
+@layer utilities {
+  *,
+  ::before,
+  ::after {
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizelegibility;
+    user-select: none;
+  }
+  p,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  blockquote,
+  pre,
+  ul,
+  ol,
+  li,
+  table,
+  tr,
+  th,
+  td,
+  input,
+  textarea,
+  span,
+  code,
+  .selectable {
+    user-select: text;
+  }
+}
