@@ -3,7 +3,11 @@
 @import "core/utilities.css";
 @tailwind utilities;
 @import "core/fonts.css";
-.image-masked {
+.image-masked-1 {
+  mask-image: url("../assets/svgs/clip-path-1.svg");
+  mask-size: cover;
+}
+.image-masked-2 {
   mask-image: url("../assets/svgs/clip-path-2.svg");
   mask-size: cover;
 }
