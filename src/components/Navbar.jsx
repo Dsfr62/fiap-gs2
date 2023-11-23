@@ -55,24 +55,21 @@ const Navbar = () => {
         } w-[280px] flex-col absolute top-[64px] right-0 h-[calc(100%-64px)] z-10 bg-[#fafafb] lg:flex lg:w-auto lg:flex-row lg:items-center lg:static lg:bg-transparent lg:h-auto lg:z-0`}
       >
         <ul className="list-reset flex flex-col mt-2 lg:mt-0 lg:flex-row lg:items-center">
-          {routes.map(
-            (route) =>
-              route.path !== "/" && (
-                <li key={route.id} className="mr-3 px-4">
-                  <Link
-                    to={route.path}
-                    className={`inline-block border-b py-2 w-full font-semibold hover:text-primary-default ${
-                      pathname === route.path
-                        ? "text-primary-default"
-                        : "text-black"
-                    }`}
-                    onClick={closeNavbar}
-                  >
-                    {route.id}
-                  </Link>
-                </li>
-              )
-          )}
+          {routes.map((route) => (
+            <li key={route.id} className="mr-3 px-4">
+              <Link
+                to={route.path}
+                className={`inline-block border-b py-2 w-full font-semibold lg:border-0 hover:text-primary-default ${
+                  pathname === route.path
+                    ? "text-primary-default"
+                    : "text-black"
+                }`}
+                onClick={closeNavbar}
+              >
+                {route.id}
+              </Link>
+            </li>
+          ))}
         </ul>
       </div>
     </nav>
