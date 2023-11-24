@@ -1,8 +1,8 @@
-import { SectionContainer } from "./Container";
+import { SectionContainer } from "./SectionContainer";
 import { SectionImage } from "./SectionImage";
-import { SectionTitle } from "./Title";
-import { SectionTextContainer } from "./TextContainer";
-import { SectionText } from "./Text";
+import { SectionTitle } from "./SectionTitle";
+import { SectionTextContainer } from "./SectionTextContainer";
+import { SectionText } from "./SectionText";
 
 export const Section = {
   Container: SectionContainer,

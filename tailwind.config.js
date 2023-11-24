@@ -17,6 +17,9 @@ module.exports = {
     fontFamily: {
       sans: ["Gilroy"],
     },
+    screens: {
+      average: "800px",
+    },
   },
   plugins: [{ "postcss-import": {} }],
 };

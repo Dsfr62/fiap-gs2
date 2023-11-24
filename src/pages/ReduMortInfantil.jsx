@@ -18,16 +18,16 @@ const ReduMortInfantilPage = () => {
       </Banner.Container>
 
       <Section.Container>
-        <Section.TextContainer className="text-left pr-[80px]">
+        <Section.Image maskImageFileName="clip-path-1" src={mortalidade_infatil_1_img} />
+        <Section.TextContainer className="average:text-right ">
           <Section.Title text="Impacto da Tecnologia no Problema" />
           <Section.Text text="Com o avanço da tecnologia, estamos vendo um impacto positivo na redução da mortalidade infantil. Soluções como aplicativos de saúde, plataformas de telemedicina e dispositivos de monitoramento estão melhorando o acesso a cuidados pré e pós-natais. Essas tecnologias fornecem informações vitais e facilitam o diagnóstico precoce de condições perigosas, tanto para mães quanto para bebês." />
         </Section.TextContainer>
-        <Section.Image maskImageFileName="clip-path-1" src={mortalidade_infatil_1_img} />
       </Section.Container>
 
-      <Section.Container className=" bg-[#f8faff]">
+      <Section.Container className="bg-[#f8faff]">
         <Section.Image maskImageFileName="clip-path-2" src={mortalidade_infatil_2_img} />
-        <Section.TextContainer className="text-right pr-[80px]">
+        <Section.TextContainer className="average:order-first average:text-left ">
           <Section.Title text="Soluções Tecnológicas e o Caminho à Frente" />
           <Section.Text text="A tecnologia não apenas melhora o acesso a informações e serviços de saúde, mas também capacita comunidades com educação e recursos para o cuidado infantil. Iniciativas como a disseminação de conhecimento sobre nutrição infantil, práticas de higiene e importância da vacinação via plataformas digitais são essenciais. Ao integrar essas soluções tecnológicas, podemos dar passos significativos em direção a um futuro onde cada criança tem a chance de um começo de vida saudável." />
         </Section.TextContainer>
