@@ -1,7 +1,7 @@
 import { twMerge } from "tailwind-merge";
-
 export const SectionImage = ({ src, maskImageFileName, ...rest }) => {
   const maskImageUrl = `url("svgs/${maskImageFileName}.svg")`;
+
   return (
     <div className="relative">
       <img

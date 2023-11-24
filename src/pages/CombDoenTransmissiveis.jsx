@@ -1,8 +1,8 @@
 import { Section } from "../components/Section";
 import { Banner } from "../components/banner";
 import CadastroBanner from "../components/cadastro-banner";
-import heart_img from "../assets/heart.png";
-import baby_img from "../assets/baby.png";
+import doencas_transmissiveis_1_img from "../assets/doencas_transmissiveis_1.png";
+import doencas_transmissiveis_2_img from "../assets/doencas_transmissiveis_2.png";
 
 const CombDoenTransmissiveisPage = () => {
   return (
@@ -17,7 +17,7 @@ const CombDoenTransmissiveisPage = () => {
         </Banner.Text>
       </Banner.Container>
       <Section.Container>
-        <Section.Image maskImageFileName="clip-path-2" src={baby_img} />
+        <Section.Image maskImageFileName="clip-path-2" src={doencas_transmissiveis_2_img} />
         <Section.TextContainer className="text-right pr-[80px]">
           <Section.Title text="Soluções Tecnológicas e o Caminho à Frente" />
           <Section.Text text="Para combater efetivamente as doenças transmissíveis, a integração de tecnologias digitais na saúde pública écrucial. Isso inclui o uso de sistemas de alerta precoce, melhoria na distribuição de vacinas e medicamentos através de cadeias de suprimentos digitais, e o fortalecimento de redes de comunicação para educação em saúde. Estas abordagens tecnológicas são essenciais para controlar surtos e proteger populações vulneráveis." />
@@ -28,7 +28,7 @@ const CombDoenTransmissiveisPage = () => {
           <Section.Title text="Impacto da Tecnologia no Problema" />
           <Section.Text text="A tecnologia está desempenhando um papel fundamental no combate a doenças transmissíveis. Através do uso de big data e inteligência artificial, estamos melhorando a vigilância e o rastreamento de surtos de doenças. Além disso, aplicativos móveis e plataformas digitais estão ampliando o alcance de campanhas de conscientização e educação sobre medidas preventivas e práticas de higiene." />
         </Section.TextContainer>
-        <Section.Image maskImageFileName="clip-path-1" src={heart_img} />
+        <Section.Image maskImageFileName="clip-path-1" src={doencas_transmissiveis_1_img} />
       </Section.Container>
       <CadastroBanner />
     </div>

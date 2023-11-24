@@ -1,5 +1,5 @@
 import { SectionContainer } from "./Container";
-import { SectionImage } from "./Image";
+import { SectionImage } from "./SectionImage";
 import { SectionTitle } from "./Title";
 import { SectionTextContainer } from "./TextContainer";
 import { SectionText } from "./Text";
