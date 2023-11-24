@@ -30,4 +30,8 @@
   .selectable {
     user-select: text;
   }
+
+  .unselectable {
+    user-select: none;
+  }
 }
