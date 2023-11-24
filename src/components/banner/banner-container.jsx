@@ -37,7 +37,7 @@ export const BannerContainer = ({
       case "primary":
         return "text-white bg-gradient-to-b from-[5%] from-secondary-dark to-secondary-default";
       case "secondary":
-        return "text-white bg-secondary-default";
+        return "text-white bg-gradient-to-b from-[30%] from-primary-dark to-primary-default";
       case "negative":
         return "text-black bg-white";
       case "positive":

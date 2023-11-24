@@ -2,9 +2,13 @@ import { useEffect, useState } from "react";
 import { Banner } from "../components/banner";
 import { Form } from "../components/form";
 import contactSVG from "../assets/svgs/contact.svg";
+import LinkElement from "../components/Link";
+import { routes } from "../routes";
 
 const PaginaInicialPage = () => {
   const [isLoading, setIsLoading] = useState(false);
+
+  const themes = routes.slice(1);
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -26,31 +30,30 @@ const PaginaInicialPage = () => {
     }
   }, []);
 
+  //TODO: adicionar video pitch
+  //TODO: adicionar primeira seção de slogan e imagem
   return (
     <div>
-      <Banner.Container variantSize="xl" variantColor="positive">
-        <Banner.Title>Página Inicial</Banner.Title>
+      <div className="flex justify-center p-8">
+        <h1 className="text-center w-full text-4xl">
+          Imagem e slogan da página inicial
+        </h1>
+      </div>
+      <Banner.Container variantSize="md" variantColor="primary">
+        <Banner.Title>Temas</Banner.Title>
         <Banner.TextCarousel>
-          <Banner.Text>
-            1. Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            Distinctio quidem quo reiciendis aperiam non voluptatem, blanditiis
-            labore nesciunt? Perferendis exercitationem consectetur sed pariatur
-            deleniti, eaque aliquid officia inventore beatae adipisci.
-          </Banner.Text>
-          <Banner.Text>
-            2. Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-            Perspiciatis ipsa, tempore nam animi fugiat, dolorum accusamus,
-            cumque voluptas deleniti praesentium facilis at beatae corporis.
-            Odit, reprehenderit id? Quas, possimus excepturi.
-          </Banner.Text>
-          <Banner.Text>
-            3. Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            Provident, officia praesentium dolore cupiditate numquam
-            voluptatibus. Illo, esse cumque. Tempora dolorum iusto quisquam
-            tenetur, inventore dignissimos nulla labore aut cupiditate quis?
-          </Banner.Text>
+          {themes.map((r) => (
+            <Banner.Text>
+              <LinkElement key={`link ${r.id}`} href={r.path}>
+                {r.id}
+              </LinkElement>
+            </Banner.Text>
+          ))}
         </Banner.TextCarousel>
       </Banner.Container>
+      <div className="flex justify-center p-8">
+        <p className="text-center w-full text-4xl">Video Pitch</p>
+      </div>
       <div className="w-full flex justify-center items-start px-4 py-6 md:pb-4 md:pt-8 bg-gray-default">
         <Form.Container
           id="form-cadastro"
