@@ -10,22 +10,12 @@ const CadastroBanner = () => {
   }
 
   return (
-    <Banner.Container
-      variantSize="md"
-      variantColor="negative"
-      textPosition="center"
-    >
+    <Banner.Container variantSize="md" variantColor="negative" textPosition="center">
       <Banner.Title>Cadastro grátis durante 30 dias</Banner.Title>
       <Banner.Text>
-        Clique no botão abaixo e preencha o formulário para receber um e-mail e
-        experimentar nossa ferramenta.
+        Clique no botão abaixo e fale conosco para se CadastroBanner e experimentar nossa ferramenta.
       </Banner.Text>
-      <Button
-        type="button"
-        variantStyle="tertiary"
-        width="w-full md:w-52"
-        onClick={handleNavigateToForm}
-      >
+      <Button type="button" variantStyle="tertiary" width="w-full md:w-52" onClick={handleNavigateToForm}>
         Quero experimentar
       </Button>
     </Banner.Container>
