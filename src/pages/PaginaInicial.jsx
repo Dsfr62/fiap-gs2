@@ -4,6 +4,11 @@ import { Form } from "../components/form";
 import contactSVG from "../assets/svgs/contact.svg";
 import LinkElement from "../components/Link";
 import { routes } from "../routes";
+import { Section } from "../components/Section";
+import home_slogan from "../assets/home_slogan.png";
+import logo_white_bg from "../assets/logo_white_bg.png";
+import { shuffleArray } from "../utils/functions";
+import { members } from "../utils/members";
 
 const PaginaInicialPage = () => {
   const [isLoading, setIsLoading] = useState(false);
@@ -34,19 +39,23 @@ const PaginaInicialPage = () => {
   //TODO: adicionar primeira seção de slogan e imagem
   return (
     <div>
-      <div className="flex justify-center p-8">
-        <h1 className="text-center w-full text-4xl">
-          Imagem e slogan da página inicial
-        </h1>
-      </div>
+      <Section.Container className="bg-[#f8faff]">
+        <Section.Image
+          className="w-11/12"
+          maskImageFileName="clip-path-2"
+          src={home_slogan}
+        />
+        <Section.TextContainer className="text-right pr-[80px]">
+          <Section.Title text="Conectando Você à Saúde do Futuro" />
+          <Section.Text text="WellnessChat é sua ponte para o bem-estar personalizado, com a sabedoria da IA ao seu alcance." />
+        </Section.TextContainer>
+      </Section.Container>
       <Banner.Container variantSize="md" variantColor="primary">
         <Banner.Title>Temas</Banner.Title>
         <Banner.TextCarousel>
           {themes.map((r) => (
-            <Banner.Text>
-              <LinkElement key={`link ${r.id}`} href={r.path}>
-                {r.id}
-              </LinkElement>
+            <Banner.Text key={r.id}>
+              <LinkElement href={r.path}>{r.id}</LinkElement>
             </Banner.Text>
           ))}
         </Banner.TextCarousel>
@@ -54,6 +63,21 @@ const PaginaInicialPage = () => {
       <div className="flex justify-center p-8">
         <p className="text-center w-full text-4xl">Video Pitch</p>
       </div>
+      <Section.Container>
+        <Section.TextContainer className="text-left pl-[80px]">
+          <Section.Title text="Conheça Nossa Equipe de Visionários" />
+          <Section.Text
+            text={`Por trás do WellnessChat está um grupo dedicado de inovadores em tecnologia e saúde. ${shuffleArray(
+              members
+            )
+              .map((member) => `${member[0]} (${member[1]})`)
+              .join(", ")}. Juntos, estamos redefinindo o cuidado preventivo.`}
+          />
+        </Section.TextContainer>
+        <div className="rounded-full w-10/12 object-cover overflow-hidden">
+          <Section.Image className="scale-150" src={logo_white_bg} />
+        </div>
+      </Section.Container>
       <div className="w-full flex justify-center items-start px-4 py-6 md:pb-4 md:pt-8 bg-gray-default">
         <Form.Container
           id="form-cadastro"
@@ -61,10 +85,11 @@ const PaginaInicialPage = () => {
           isLoading={isLoading}
         >
           <Form.Title>
-            Cadastre-se
+            Fale Conosco
             <Form.SubTitle>
-              Fale Conosco para se cadastrar e receber acesso grátis à nossa
-              plataforma durante 30 dias.
+              Preencha o formulário para se cadastrar, enviar dúvidas e
+              sugestões e receber acesso grátis à nossa plataforma durante 30
+              dias.
             </Form.SubTitle>
           </Form.Title>
           <Form.InputContainer>

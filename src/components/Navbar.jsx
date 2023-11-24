@@ -1,8 +1,8 @@
 import { useState } from "react";
 import { Link, useHref } from "react-router-dom";
 import { routes } from "../routes";
-import BurgerSvg from "./icons/BurgerSvg";
-import CloseSvg from "./icons/CloseSvg";
+import BurgerSvg from "../assets/svgs/burger.svg";
+import CloseSvg from "../assets/svgs/close.svg";
 
 const Navbar = () => {
   const pathname = useHref();
@@ -33,7 +33,11 @@ const Navbar = () => {
         >
           <p className="mr-2 text-black">{isOpen ? "Fechar" : "Menu"}</p>
           <div className="h-6 w-6 flex justify-center items-center rounded-full bg-black bg-opacity-10">
-            {isOpen ? <CloseSvg /> : <BurgerSvg />}
+            {isOpen ? (
+              <img src={CloseSvg} alt="fechar" />
+            ) : (
+              <img src={BurgerSvg} alt="menu" />
+            )}
           </div>
         </button>
       </div>
@@ -43,7 +47,7 @@ const Navbar = () => {
       <div
         className={`${
           isOpen ? "block" : "hidden"
-        } w-full absolute top-[64px] bg-black bg-opacity-50 h-[calc(100%-64px)] lg:hidden`}
+        } w-full absolute top-[64px] bg-black bg-opacity-50 h-[calc(100%-64px)] lg:hidden z-10`}
         onClick={closeNavbar}
       />
 
@@ -52,7 +56,7 @@ const Navbar = () => {
       <div
         className={`${
           isOpen ? "flex" : "hidden"
-        } w-[280px] flex-col absolute top-[64px] right-0 h-[calc(100%-64px)] z-10 bg-[#fafafb] lg:flex lg:w-auto lg:flex-row lg:items-center lg:static lg:bg-transparent lg:h-auto lg:z-0`}
+        } w-[280px] flex-col absolute top-[64px] right-0 h-[calc(100%-64px)] z-20 bg-[#fafafb] lg:flex lg:w-auto lg:flex-row lg:items-center lg:static lg:bg-transparent lg:h-auto lg:z-0`}
       >
         <ul className="list-reset flex flex-col mt-2 lg:mt-0 lg:flex-row lg:items-center">
           {routes.map((route) => (

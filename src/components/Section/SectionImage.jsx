@@ -15,7 +15,7 @@ export const SectionImage = ({ src, maskImageFileName, ...rest }) => {
               }
             : {}
         }
-        className={twMerge("w-full h-auto object-cover", rest.className)}
+        className={twMerge("w-full h-auto object-cover relative", rest.className)}
         src={src}
       />
     </div>

@@ -1,25 +1,9 @@
+import { shuffleArray } from "../utils/functions";
+import { members } from "../utils/members";
+
 const Footer = () => {
-  const members = [
-    "Eduardo Sávio",
-    "Guilherme Mazur",
-    "Marina Pereira",
-    "Bruno Lagos",
-    "Gustavo Vieira",
-  ];
-
-  const getCurrentYear = () => {
+  function getCurrentYear() {
     return new Date().getFullYear();
-  };
-
-  function shuffleArray(array) {
-    let newArray = array.slice();
-
-    for (let i = newArray.length - 1; i > 0; i--) {
-      const j = Math.floor(Math.random() * (i + 1));
-      [newArray[i], newArray[j]] = [newArray[j], newArray[i]];
-    }
-
-    return newArray;
   }
 
   return (
@@ -37,7 +21,7 @@ const Footer = () => {
           <p className="font-semibold">Feito com ❤️ por:</p>
           <ul>
             {shuffleArray(members).map((member) => (
-              <li key={member}>{member}</li>
+              <li key={member[1]}>{member[0]}</li>
             ))}
           </ul>
         </div>
