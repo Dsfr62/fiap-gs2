@@ -13,12 +13,12 @@ module.exports = {
         "gray-default": "#f3f2f2",
         "gray-dark": "#eeeded",
       },
-    },
-    fontFamily: {
-      sans: ["Gilroy"],
-    },
-    screens: {
-      average: "800px",
+      fontFamily: {
+        sans: ["Gilroy"],
+      },
+      screens: {
+        average: "800px",
+      },
     },
   },
   plugins: [{ "postcss-import": {} }],
