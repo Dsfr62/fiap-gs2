@@ -12,7 +12,9 @@ import { members } from "../utils/members";
 
 const PaginaInicialPage = () => {
   const [isLoading, setIsLoading] = useState(false);
-
+  const membersShuffled = shuffleArray(members)
+    .map((member) => `${member[0]} (${member[1]})`)
+    .join(", ");
   const themes = routes.slice(1);
 
   const handleSubmit = (e) => {
@@ -26,9 +28,7 @@ const PaginaInicialPage = () => {
 
   useEffect(() => {
     const scrollToForm = () => {
-      document
-        .getElementById("form-cadastro")
-        .scrollIntoView({ behavior: "smooth" });
+      document.getElementById("form-cadastro").scrollIntoView({ behavior: "smooth" });
     };
     if (window.location.hash === "#form-cadastro") {
       scrollToForm();
@@ -40,12 +40,8 @@ const PaginaInicialPage = () => {
   return (
     <div>
       <Section.Container className="bg-[#f8faff]">
-        <Section.Image
-          className="w-11/12"
-          maskImageFileName="clip-path-2"
-          src={home_slogan}
-        />
-        <Section.TextContainer className="text-right pr-[80px]">
+        <Section.Image maskImageFileName="clip-path-2" src={home_slogan} />
+        <Section.TextContainer className="average:text-right">
           <Section.Title text="Conectando Você à Saúde do Futuro" />
           <Section.Text text="WellnessChat é sua ponte para o bem-estar personalizado, com a sabedoria da IA ao seu alcance." />
         </Section.TextContainer>
@@ -64,63 +60,36 @@ const PaginaInicialPage = () => {
         <p className="text-center w-full text-4xl">Video Pitch</p>
       </div>
       <Section.Container>
-        <Section.TextContainer className="text-left pl-[80px]">
-          <Section.Title text="Conheça Nossa Equipe de Visionários" />
-          <Section.Text
-            text={`Por trás do WellnessChat está um grupo dedicado de inovadores em tecnologia e saúde. ${shuffleArray(
-              members
-            )
-              .map((member) => `${member[0]} (${member[1]})`)
-              .join(", ")}. Juntos, estamos redefinindo o cuidado preventivo.`}
-          />
-        </Section.TextContainer>
-        <div className="rounded-full w-10/12 object-cover overflow-hidden">
+        <div className="rounded-full object-cover overflow-hidden w-10/12 average:w-100">
           <Section.Image className="scale-150" src={logo_white_bg} />
         </div>
+        <Section.TextContainer className="mt-[30px] average:mt-0 average:text-right average:order-last">
+          <Section.Title text="Conheça Nossa Equipe de Visionários" />
+          <Section.Text
+            text={`Por trás do WellnessChat está um grupo dedicado de inovadores em tecnologia e saúde. ${membersShuffled}. Juntos, estamos redefinindo o cuidado preventivo.`}
+          />
+        </Section.TextContainer>
       </Section.Container>
       <div className="w-full flex justify-center items-start px-4 py-6 md:pb-4 md:pt-8 bg-gray-default">
-        <Form.Container
-          id="form-cadastro"
-          onSubmit={(e) => handleSubmit(e)}
-          isLoading={isLoading}
-        >
+        <Form.Container id="form-cadastro" onSubmit={(e) => handleSubmit(e)} isLoading={isLoading}>
           <Form.Title>
             Fale Conosco
             <Form.SubTitle>
-              Preencha o formulário para se cadastrar, enviar dúvidas e
-              sugestões e receber acesso grátis à nossa plataforma durante 30
-              dias.
+              Preencha o formulário para se cadastrar, enviar dúvidas e sugestões e receber acesso grátis à nossa
+              plataforma durante 30 dias.
             </Form.SubTitle>
           </Form.Title>
           <Form.InputContainer>
             <Form.Label htmlFor="nome">Nome</Form.Label>
-            <Form.Input
-              id="nome"
-              type="text"
-              placeholder="Digite aqui"
-              required
-              disabled={isLoading}
-            />
+            <Form.Input id="nome" type="text" placeholder="Digite aqui" required disabled={isLoading} />
           </Form.InputContainer>
           <Form.InputContainer>
             <Form.Label htmlFor="email">Email</Form.Label>
-            <Form.Input
-              id="email"
-              type="text"
-              placeholder="Digite aqui"
-              required
-              disabled={isLoading}
-            />
+            <Form.Input id="email" type="text" placeholder="Digite aqui" required disabled={isLoading} />
           </Form.InputContainer>
           <Form.InputContainer>
             <Form.Label htmlFor="descricao">Fale sobre você</Form.Label>
-            <Form.Input
-              id="descricao"
-              type="text"
-              placeholder="Digite aqui"
-              required
-              disabled={isLoading}
-            />
+            <Form.Input id="descricao" type="text" placeholder="Digite aqui" required disabled={isLoading} />
           </Form.InputContainer>
           <Form.Button>Enviar</Form.Button>
         </Form.Container>
