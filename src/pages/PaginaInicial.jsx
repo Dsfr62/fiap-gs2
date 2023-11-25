@@ -9,6 +9,7 @@ import home_slogan2 from "../assets/home_slogan2.png";
 import logo_white_bg from "../assets/logo_white_bg.png";
 import { shuffleArray } from "../utils/functions";
 import { members } from "../utils/members";
+import Button from "../components/Button";
 
 const PaginaInicialPage = () => {
   const [isLoading, setIsLoading] = useState(false);
@@ -46,6 +47,14 @@ const PaginaInicialPage = () => {
         <Section.TextContainer className="average:text-right">
           <Section.Title text="Conectando Você à Saúde do Futuro" />
           <Section.Text text="WellnessChat é sua ponte para o bem-estar personalizado, com a sabedoria da IA ao seu alcance." />
+          <a
+            className="block w-52 h-10 mx-auto average:ml-auto average:mr-0 mt-8"
+            href="#video-pitch"
+          >
+            <Button width="w-full h-full" variantStyle="primary">
+              Saiba mais
+            </Button>
+          </a>
         </Section.TextContainer>
       </Section.Container>
       <Banner.Container variantSize="md" variantColor="primary">
@@ -58,7 +67,7 @@ const PaginaInicialPage = () => {
           ))}
         </Banner.TextCarousel>
       </Banner.Container>
-      <div className="flex justify-center p-8">
+      <div id="video-pitch" className="flex justify-center p-8">
         <p className="text-center w-full text-4xl">Video Pitch</p>
       </div>
       <Section.Container>

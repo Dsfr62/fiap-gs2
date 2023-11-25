@@ -12,7 +12,7 @@ Após conferir instalação do node, vá para o diretório do projeto e insira o
 ### Instalar dependências
 
 ```bash
-npm i
+npm install
 ```
 
 ### Iniciar servidor
