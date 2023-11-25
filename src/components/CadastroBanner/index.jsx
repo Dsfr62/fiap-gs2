@@ -1,5 +1,5 @@
 import Button from "../Button";
-import { Banner } from "../banner";
+import { Banner } from "../Banner";
 import { useNavigate } from "react-router-dom";
 
 const CadastroBanner = () => {

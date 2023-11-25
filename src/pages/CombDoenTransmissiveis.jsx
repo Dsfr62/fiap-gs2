@@ -1,6 +1,6 @@
 import { Section } from "../components/Section";
-import { Banner } from "../components/banner";
-import CadastroBanner from "../components/cadastro-banner";
+import { Banner } from "../components/Banner";
+import CadastroBanner from "../components/CadastroBanner";
 import doencas_transmissiveis_1_img from "../assets/doencas_transmissiveis_1.png";
 import doencas_transmissiveis_2_img from "../assets/doencas_transmissiveis_2.png";
 

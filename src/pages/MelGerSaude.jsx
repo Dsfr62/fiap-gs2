@@ -1,6 +1,6 @@
-import { Banner } from "../components/banner";
+import { Banner } from "../components/Banner";
 import { Section } from "../components/Section";
-import CadastroBanner from "../components/cadastro-banner";
+import CadastroBanner from "../components/CadastroBanner";
 import saude_geral_1_img from "../assets/saude_geral_1.png";
 import saude_geral_2_img from "../assets/saude_geral_2.png";
 

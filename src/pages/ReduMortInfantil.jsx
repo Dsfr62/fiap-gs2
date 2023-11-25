@@ -1,6 +1,6 @@
-import { Banner } from "../components/banner";
+import { Banner } from "../components/Banner";
 import { Section } from "../components/Section";
-import CadastroBanner from "../components/cadastro-banner";
+import CadastroBanner from "../components/CadastroBanner";
 import mortalidade_infatil_1_img from "../assets/mortalidade_infantil_1.png";
 import mortalidade_infatil_2_img from "../assets/mortalidade_infantil_2.png";
 

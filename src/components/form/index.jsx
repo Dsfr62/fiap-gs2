@@ -1,10 +1,10 @@
-import FormContainer from "./form-container";
-import FormTitle from "./form-title";
-import FormSubTitle from "./form-subtitle";
-import FormInputContainer from "./form-input-container";
-import FormInput from "./form-input";
-import FormLabel from "./form-label";
-import FormButton from "./form-button";
+import FormContainer from "./FormContainer";
+import FormTitle from "./FormTitle";
+import FormSubTitle from "./FormSubtitle";
+import FormInputContainer from "./FormInputContainer";
+import FormInput from "./FormInput";
+import FormLabel from "./FormLabel";
+import FormButton from "./FormButton";
 
 export const Form = {
   Container: FormContainer,

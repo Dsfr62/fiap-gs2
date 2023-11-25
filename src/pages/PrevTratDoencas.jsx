@@ -1,6 +1,6 @@
-import { Banner } from "../components/banner";
+import { Banner } from "../components/Banner";
 import { Section } from "../components/Section";
-import CadastroBanner from "../components/cadastro-banner";
+import CadastroBanner from "../components/CadastroBanner";
 import ncds_1_img from "../assets/ncds_1.png";
 import ncds_2_img from "../assets/ncds_2.png";
 
