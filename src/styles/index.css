@@ -1,4 +1,40 @@
 @tailwind base;
 @tailwind components;
-@import "core/utilities.css";
+@import "tailwindcss/utilities";
 @import "core/fonts.css";
+@layer utilities {
+  *,
+  ::before,
+  ::after {
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizelegibility;
+    user-select: none;
+  }
+  p,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  blockquote,
+  pre,
+  ul,
+  ol,
+  li,
+  table,
+  tr,
+  th,
+  td,
+  input,
+  textarea,
+  span,
+  code,
+  .selectable {
+    user-select: text;
+  }
+
+  .unselectable {
+    user-select: none;
+  }
+}
