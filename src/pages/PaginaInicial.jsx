@@ -62,10 +62,8 @@ const PaginaInicialPage = () => {
         <p className="text-center w-full text-4xl">Video Pitch</p>
       </div>
       <Section.Container>
-        <div className="rounded-full object-cover overflow-hidden w-10/12 average:w-100">
-          <Section.Image className="scale-150" src={logo_white_bg} />
-        </div>
-        <Section.TextContainer className="mt-[30px] average:mt-0 average:text-right average:order-last">
+        <Section.Image maskImageFileName="clip-path-1" src={logo_white_bg} />
+        <Section.TextContainer className="mt-[30px] average:mt-0 average:text-left average:order-first">
           <Section.Title text="Conheça Nossa Equipe de Visionários" />
           <Section.Text
             text={`Por trás do WellnessChat está um grupo dedicado de inovadores em tecnologia e saúde. ${membersShuffled}. Juntos, estamos redefinindo o cuidado preventivo.`}
