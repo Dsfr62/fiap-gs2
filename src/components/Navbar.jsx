@@ -3,6 +3,7 @@ import { Link, useHref } from "react-router-dom";
 import { routes } from "../routes";
 import BurgerSvg from "../assets/svgs/burger.svg";
 import CloseSvg from "../assets/svgs/close.svg";
+import logo_sem_fundo from "../assets/logo-sem-fundo.gif";
 
 const Navbar = () => {
   const pathname = useHref();
@@ -21,23 +22,16 @@ const Navbar = () => {
       {/* Bloco contendo a Logo e o botão de abrir menu que aparece quando a tela está pequena */}
 
       <div className="w-full px-4 flex justify-between items-center lg:w-auto">
-        <Link
-          className="text-primary-default text-2xl font-bold no-underline block"
-          to="/"
-        >
-          WellnessChat
-        </Link>
-        <button
-          className="flex cursor-pointer lg:hidden"
-          onClick={handleToggleNavbar}
-        >
+        <div className="flex items-center justify-center gap-2">
+          <img src={logo_sem_fundo} alt="" className="w-[30px] aspect-square" />
+          <Link className="text-primary-default text-2xl font-bold no-underline block" to="/">
+            WellnessChat
+          </Link>
+        </div>
+        <button className="flex cursor-pointer lg:hidden" onClick={handleToggleNavbar}>
           <p className="mr-2 text-black">{isOpen ? "Fechar" : "Menu"}</p>
           <div className="h-6 w-6 flex justify-center items-center rounded-full bg-black bg-opacity-10">
-            {isOpen ? (
-              <img src={CloseSvg} alt="fechar" />
-            ) : (
-              <img src={BurgerSvg} alt="menu" />
-            )}
+            {isOpen ? <img src={CloseSvg} alt="fechar" /> : <img src={BurgerSvg} alt="menu" />}
           </div>
         </button>
       </div>
@@ -64,9 +58,7 @@ const Navbar = () => {
               <Link
                 to={route.path}
                 className={`inline-block border-b py-2 w-full font-semibold lg:border-0 hover:text-primary-default ${
-                  pathname === route.path
-                    ? "text-primary-default"
-                    : "text-black"
+                  pathname === route.path ? "text-primary-default" : "text-black"
                 }`}
                 onClick={closeNavbar}
               >
