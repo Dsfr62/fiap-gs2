@@ -17,7 +17,7 @@ module.exports = {
         sans: ["Gilroy"],
       },
       screens: {
-        average: "800px",
+        average: "750px",
       },
     },
   },
