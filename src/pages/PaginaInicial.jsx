@@ -5,7 +5,7 @@ import contactSVG from "../assets/svgs/contact.svg";
 import LinkElement from "../components/Link";
 import { routes } from "../routes";
 import { Section } from "../components/Section";
-import home_slogan from "../assets/home_slogan.png";
+import home_slogan2 from "../assets/home_slogan2.png";
 import logo_white_bg from "../assets/logo_white_bg.png";
 import { shuffleArray } from "../utils/functions";
 import { members } from "../utils/members";
@@ -28,7 +28,9 @@ const PaginaInicialPage = () => {
 
   useEffect(() => {
     const scrollToForm = () => {
-      document.getElementById("form-cadastro").scrollIntoView({ behavior: "smooth" });
+      document
+        .getElementById("form-cadastro")
+        .scrollIntoView({ behavior: "smooth" });
     };
     if (window.location.hash === "#form-cadastro") {
       scrollToForm();
@@ -40,7 +42,7 @@ const PaginaInicialPage = () => {
   return (
     <div>
       <Section.Container className="bg-[#f8faff]">
-        <Section.Image maskImageFileName="clip-path-2" src={home_slogan} />
+        <Section.Image maskImageFileName="clip-path-2" src={home_slogan2} />
         <Section.TextContainer className="average:text-right">
           <Section.Title text="Conectando Você à Saúde do Futuro" />
           <Section.Text text="WellnessChat é sua ponte para o bem-estar personalizado, com a sabedoria da IA ao seu alcance." />
@@ -71,25 +73,48 @@ const PaginaInicialPage = () => {
         </Section.TextContainer>
       </Section.Container>
       <div className="w-full flex justify-center items-start px-4 py-6 md:pb-4 md:pt-8 bg-gray-default">
-        <Form.Container id="form-cadastro" onSubmit={(e) => handleSubmit(e)} isLoading={isLoading}>
+        <Form.Container
+          id="form-cadastro"
+          onSubmit={(e) => handleSubmit(e)}
+          isLoading={isLoading}
+        >
           <Form.Title>
             Fale Conosco
             <Form.SubTitle>
-              Preencha o formulário para se cadastrar, enviar dúvidas e sugestões e receber acesso grátis à nossa
-              plataforma durante 30 dias.
+              Preencha o formulário para se cadastrar, enviar dúvidas e
+              sugestões e receber acesso grátis à nossa plataforma durante 30
+              dias.
             </Form.SubTitle>
           </Form.Title>
           <Form.InputContainer>
             <Form.Label htmlFor="nome">Nome</Form.Label>
-            <Form.Input id="nome" type="text" placeholder="Digite aqui" required disabled={isLoading} />
+            <Form.Input
+              id="nome"
+              type="text"
+              placeholder="Digite aqui"
+              required
+              disabled={isLoading}
+            />
           </Form.InputContainer>
           <Form.InputContainer>
             <Form.Label htmlFor="email">Email</Form.Label>
-            <Form.Input id="email" type="text" placeholder="Digite aqui" required disabled={isLoading} />
+            <Form.Input
+              id="email"
+              type="text"
+              placeholder="Digite aqui"
+              required
+              disabled={isLoading}
+            />
           </Form.InputContainer>
           <Form.InputContainer>
             <Form.Label htmlFor="descricao">Fale sobre você</Form.Label>
-            <Form.Input id="descricao" type="text" placeholder="Digite aqui" required disabled={isLoading} />
+            <Form.Input
+              id="descricao"
+              type="text"
+              placeholder="Digite aqui"
+              required
+              disabled={isLoading}
+            />
           </Form.InputContainer>
           <Form.Button>Enviar</Form.Button>
         </Form.Container>
